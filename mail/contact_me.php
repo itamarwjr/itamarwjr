@@ -20,7 +20,8 @@ $to = 'contato@itamarwjr.com.br'; // Add your email address inbetween the '' rep
 $email_subject = "Novo E-mail de:  $name";
 $email_body = "Alguem enviou um e-mail do site.\n\n"."Detalhes:\n\nNome: $name\n\nE-mail: $email_address\n\nTelefone: $phone\n\nMensagem:\n$message";
 $headers = "From: noreply@itamarwjr.com.br\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address";   
+$headers .= "Reply-To: $email_address";
+$headers .= "Content-Type: text/html; charset=UTF-8";   
 mail($to,$email_subject,$email_body,$headers);
 return true;         
 ?>
